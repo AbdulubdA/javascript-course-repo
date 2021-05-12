@@ -18,6 +18,7 @@
     <input name="timezone" type="radio" value="pst" id="pst"> Pacific Standard Time <br>   
     <input name="timezone" type="radio" value="ast" id="ast"> Alaska Standard Time <br>
     <input name="timezone" type="radio" value="hast" id="hast"> Hawaii-Aleutian Standard Time <br>
+    <input name="timezone" type="radio" value="bst" id="bst"> British Summer Time <br>    
         
     <button type="button" value="Submit" onclick="readForm()"> Submit  </button>  
     </form>
@@ -35,7 +36,7 @@
   }
     
     }
-        document.getElementById("radioButtonsSection").innerHTML = myVariable;
+        document.getElementById("JSFunction").innerHTML = myVariable;
     }    
         
      function printTime(){
@@ -50,7 +51,8 @@
      document.getElementById("JSFunction").innerHTML = currentTime;    
          
      } 
-      return printTime();                                                    
+      return printTime();  
+       
     </script>
      </div>
                                                   
