@@ -8,9 +8,11 @@
 </head>
 <body>
     <title>"Hello World!"</title>
-    
+
+    <br>
     <div id="radioButtonsSection">
     
+
     <form>
     <input name="timezone" type="radio" value="est" id="est"> Eastern Standard Time <br>
     <input name="timezone" type="radio" value="cst" id="cst"> Central Standard Time <br>    
@@ -22,7 +24,7 @@
         
     <button type="button" value="Submit" onclick="readForm()"> Submit  </button>  
     </form>
-    
+
     </div> 
     
     <div id="JSFunction">
@@ -36,8 +38,10 @@
   }
     
     }
+
+        document.getElementById("JSFunction").innerHTML = myVariable;
     }    
-document.getElementById("radioButtonsSection").innerHTML = myVariable;
+
         
      function printTime(){
      var day = new Date();
@@ -45,6 +49,14 @@ document.getElementById("radioButtonsSection").innerHTML = myVariable;
      var minute = day.getMinutes();    
      var seconds = day.getSeconds();
          
+
+      var currentTime = hour + ":" + minute + ":" + seconds;
+         setTimeout(printTime, 1000);
+         
+     document.getElementById("radioButtonsSection").innerHTML = currentTime;    
+         
+     }   
+
       var currentTime = "" + hour + ":" + minute + ":" + seconds;
          setTimeout(printTime(),1000);
          
@@ -52,6 +64,7 @@ document.getElementById("radioButtonsSection").innerHTML = myVariable;
          
      } 
       return printTime();  
+
        
     </script>
      </div>
