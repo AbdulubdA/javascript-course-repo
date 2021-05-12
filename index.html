@@ -10,15 +10,32 @@
     <title>"Hello World!"</title>
     
     <form>
-    <input name = "timezone" type = "radio" value = "est"> Eastern Standard Time <br>
-    <input name = "timezone" type = "radio" value = "cst"> Central Standard Time <br>    
-    <input name = "timezone" type = "radio" value = "mst"> Mountain Standard Time <br>
-    <input name = "timezone" type = "radio" value = "pst"> Pacific Standard Time <br>   
-    <input name = "timezone" type = "radio" value = "ast"> Alaska Standard Time <br>
-    <input name = "timezone" type = "radio" value = "hast"> Hawaii-Aleutian Standard Time <br>
+    <input name="timezone" type="radio" value="est" id="est"> Eastern Standard Time <br>
+    <input name="timezone" type="radio" value="cst" id="cst"> Central Standard Time <br>    
+    <input name="timezone" type="radio" value="mst" id="mst"> Mountain Standard Time <br>
+    <input name="timezone" type="radio" value="pst" id="pst"> Pacific Standard Time <br>   
+    <input name="timezone" type="radio" value="ast" id="ast"> Alaska Standard Time <br>
+    <input name="timezone" type="radio" value="hast" id="hast"> Hawaii-Aleutian Standard Time <br>
         
-    <button type="submit"> Submit  </button>  
+    <button type="button" value="Submit" onclick="readForm()"> Submit  </button>  
     </form>
+    
+    <div id="blah"> </div>
+    
+    <script type="text/javascript">
+    function readForm(){
+    var myVariable = blah;
+    var radioButtons = document.getElementsByName("timezone");
+    for(let i = 0; i < radioButtons.length; i++){
+    if (radioButtons[i].checked == true){
+        myVariable = radioButtons[i].value;
+  }
+    
+    }
+        document.getElementById("blah").innerHTML = myVariable;
+    }    
+        
+    </script>
     
 </body>
 </html>
