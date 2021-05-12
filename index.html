@@ -8,7 +8,8 @@
 </head>
 <body>
     <title>"Hello World!"</title>
-    
+
+    <br>
     <div id="radioButtonsSection">
     
     <form>
@@ -22,7 +23,7 @@
         
     <button type="button" value="Submit" onclick="readForm()"> Submit  </button>  
     </form>
-    
+    <br>
     </div> 
     
     <div id="JSFunction">
@@ -45,10 +46,10 @@
      var minute = day.getMinutes();    
      var seconds = day.getSeconds();
          
-      var currentTime = "" + hour + ":" + minute + ":" + seconds;
-         setTimeout(printTime(),1000);
+      var currentTime = hour + ":" + minute + ":" + seconds;
+         setTimeout(printTime, 1000);
          
-     document.getElementById("JSFunction").innerHTML = currentTime;    
+     document.getElementById("radioButtonsSection").innerHTML = currentTime;    
          
      } 
       return printTime();  
