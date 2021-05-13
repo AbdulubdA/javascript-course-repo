@@ -14,7 +14,14 @@
 <form>
 
 <input name="timezone" value="est" type="radio"> Eastern Standard Time <br>
-@@ -22,8 +25,10 @@
+<input name="timezone" value="cst" type="radio"> Central Standard Time <br>
+<input name="timezone" value="mst" type="radio"> Mountain Standard Time <br>
+<input name="timezone" value="pst" type="radio"> Pacific Standard Time <br>
+<input name="timezone" value="ast" type="radio"> Alaska Standard Time <br>
+<input name="timezone" value="hast" type="radio"> Hawaii-Aleutian Standard Time <br>
+<input name="timezone" value="bst" type="radio"> British Standard Time <br>
+
+<button type="button" value="Submit" onclick="printSelection()"> Submit </button> 
 
 </form>
 
@@ -26,7 +33,11 @@
 
 <script type="text/javascript">
 
-@@ -37,16 +42,26 @@
+function printSelection(){
+var firstVariable = document.getElementsByName("timezone");
+var secondVariable = "bst";
+for(let i = 0; i < firstVariable.length; i++){
+    
 if(firstVariable[i].checked == true){
 
 secondVariable = firstVariable[i].value;
