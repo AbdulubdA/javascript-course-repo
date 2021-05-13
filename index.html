@@ -28,7 +28,6 @@
 </div>
 
 <br>
-<div id="placeholder"></div>
 <div id="JSFunction1"></div>
 
 <script type="text/javascript">
@@ -37,11 +36,11 @@ function printSelection(){
 var firstVariable = document.getElementsByName("timezone");
 var secondVariable = "bst";
 for(let i = 0; i < firstVariable.length; i++){
-    
+
 if(firstVariable[i].checked == true){
 
 secondVariable = firstVariable[i].value;
-document.getElementById("placeholder").innerHTML = secondVariable;
+
 document.getElementById("JSFunction1").innerHTML = secondVariable;
 
 }
