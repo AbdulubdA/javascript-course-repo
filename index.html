@@ -30,11 +30,12 @@
     <div id="JSFunction">
     <script type="text/javascript">
     var offset = 0;
+
     function readForm(){
-    var myVariable = blah;
+    var myVariable = "whatever";
     var radioButtons = document.getElementsByName("timezone");
     for(var i = 0; i < radioButtons.length; i++){
-    if (radioButtons[i].checked == true){
+    if (radioButtons[i].checked === true){
         myVariable = radioButtons[i].value;}
         }
         if(timezone === "est"){offset = -5;}
