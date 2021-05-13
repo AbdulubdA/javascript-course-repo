@@ -7,9 +7,6 @@
     <title>"Hello World!"</title>
 </head>
 <body>
-    
-<br>
-<div id="TimezoneInput">
 
 <form>
     
@@ -25,7 +22,6 @@
 
 </form>
 
-</div>
 <br>
 
 <div id="JSFunction1">
@@ -57,7 +53,7 @@ var seconds = dateVariable.getSeconds();
 
 var currentTime = hours + ":" + minutes + ":" + seconds;
 
-setTimeout(printClock, 1000);
+setTimeout(printClock(), 1000);
 
 document.getElementById("JSFunction1").innerHTML = currentTime;
 
