@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>"Hello World!"</title>
+    
 </head>
+
 <body>
 
 <br>
@@ -32,6 +34,8 @@
 
 <script type="text/javascript">
 
+var offset = 0;
+
 function printSelection(){
 
 var firstVariable = document.getElementsByName("timezone");
@@ -47,12 +51,21 @@ document.getElementById("JSFunction1").innerHTML = secondVariable;
 
 }
 }
+
+if(secondVariable === "est"){offset = -5;}
+else if(timezone === "cst"){offset = -6;}
+else if(timezone === "mst"){offset = -7;}
+else if(timezone === "pst"){offset = -8;}
+else if(timezone === "ast"){offset = -4;}
+else if(timezone === "hast"){offset = 13;}
+else if(timezone === "bst"){offset = 0;}
+
 }
 
 function printClock(){
 
 var dateVariable = new Date();
-var hours = dateVariable.getHours();
+var hours = dateVariable.getHours() + offset;
 var minutes = dateVariable.getMinutes();
 var seconds = dateVariable.getSeconds();
 
