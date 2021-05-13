@@ -8,36 +8,29 @@
 </head>
 <body>
 
-<form>
-    
-<input name="timezone" value="est" type="radio"> Eastern Standard Time <br>
-<input name="timezone" value="cst" type="radio"> Central Standard Time <br>
-<input name="timezone" value="mst" type="radio"> Mountain Standard Time <br>
-<input name="timezone" value="pst" type="radio"> Pacific Standard Time <br>
-<input name="timezone" value="ast" type="radio"> Alaska Standard Time <br>
-<input name="timezone" value="hast" type="radio"> Hawaii-Aleutian Standard Time <br>
-<input name="timezone" value="bst" type="radio"> British Standard Time <br>
+<br>
+<div id="TimezoneInput">
 
-<button type="button" value="Submit" onclick="printSelection()"> Submit </button> 
+<form>
+
+<input name="timezone" value="est" type="radio"> Eastern Standard Time <br>
+@@ -22,8 +25,10 @@
 
 </form>
 
-<br>
+</div>
 
-<div id="JSFunction1">
+<br>
+<div id="placeholder"></div>
+<div id="JSFunction1"></div>
 
 <script type="text/javascript">
 
-function printSelection(){
-
-var firstVariable = document.getElementsByName("timezone");
-var secondVariable = "bst";
-
-for(let i = 0; i < firstVariable.length; i++){
-
+@@ -37,16 +42,26 @@
 if(firstVariable[i].checked == true){
 
 secondVariable = firstVariable[i].value;
+document.getElementById("placeholder").innerHTML = secondVariable;
 document.getElementById("JSFunction1").innerHTML = secondVariable;
 
 }
@@ -51,9 +44,11 @@ var hours = dateVariable.getHours();
 var minutes = dateVariable.getMinutes();
 var seconds = dateVariable.getSeconds();
 
+}
 var currentTime = hours + ":" + minutes + ":" + seconds;
 
-setTimeout(printClock(), 1000);
+}
+setTimeout(printClock, 1000);
 
 document.getElementById("JSFunction1").innerHTML = currentTime;
 
