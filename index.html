@@ -33,8 +33,10 @@
 <script type="text/javascript">
 
 function printSelection(){
+
 var firstVariable = document.getElementsByName("timezone");
 var secondVariable = "bst";
+
 for(let i = 0; i < firstVariable.length; i++){
 
 if(firstVariable[i].checked == true){
@@ -58,7 +60,7 @@ var seconds = dateVariable.getSeconds();
 var currentTime = hours + ":" + minutes + ":" + seconds;
 
 
-setTimeout(printClock, 1000);
+setTimeout(printClock(), 1000);
 
 document.getElementById("JSFunction1").innerHTML = currentTime;
 
