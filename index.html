@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Timezone converter</title>
 </head>
 
 <body>
-    <title>"Hello World!"</title>
+    
+    Choose a timezone
     
     <br>
     <div id="radioButtonsSection">
-    
     <form>
     <input name="timezone" type="radio" value="est" id="est"> Eastern Standard Time <br>
     <input name="timezone" type="radio" value="cst" id="cst"> Central Standard Time <br>    
@@ -24,17 +24,18 @@
         
     <button type="button" value="Submit" onclick="readForm()"> Submit  </button>  
     </form>
-    <br>
     </div> 
+    <br>
     
     <div id="JSFunction">
     <script type="text/javascript">
     var offset = 0;
+
     function readForm(){
-    var myVariable = blah;
+    var myVariable = "whatever";
     var radioButtons = document.getElementsByName("timezone");
-    for(let i = 0; i < radioButtons.length; i++){
-    if (radioButtons[i].checked == true){
+    for(var i = 0; i < radioButtons.length; i++){
+    if (radioButtons[i].checked === true){
         myVariable = radioButtons[i].value;}
         }
         if(timezone === "est"){offset = -5;}
