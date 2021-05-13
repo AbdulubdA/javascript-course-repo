@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <title>"Hello World!"</title>
-
+    
     <br>
     <div id="radioButtonsSection">
     
-
     <form>
     <input name="timezone" type="radio" value="est" id="est"> Eastern Standard Time <br>
     <input name="timezone" type="radio" value="cst" id="cst"> Central Standard Time <br>    
@@ -24,38 +24,47 @@
         
     <button type="button" value="Submit" onclick="readForm()"> Submit  </button>  
     </form>
-
+    <br>
     </div> 
     
     <div id="JSFunction">
     <script type="text/javascript">
+    var offset = 0;
     function readForm(){
     var myVariable = blah;
     var radioButtons = document.getElementsByName("timezone");
     for(let i = 0; i < radioButtons.length; i++){
     if (radioButtons[i].checked == true){
-        myVariable = radioButtons[i].value;
-  }
-    
-    }
+        myVariable = radioButtons[i].value;}
+        }
+        if(timezone === "est"){offset = -5;}
+        else if(timezone === "cst"){offset = -6;}
+        else if(timezone === "mst"){offset = -7;}
+        else if(timezone === "pst"){offset = -8;}
+        else if(timezone === "ast"){offset = -4;}
+        else if(timezone === "hast"){offset = 13;}
+        else if(timezone === "bst"){offset = 0;}
+        
 
         document.getElementById("JSFunction").innerHTML = myVariable;
+        return myVariable;
+        return currentTime;
     }    
-
         
      function printTime(){
      var day = new Date();
-     var hour = day.getHours();
+     var hour = day.getHours() + offset;
      var minute = day.getMinutes();    
      var seconds = day.getSeconds();
          
-
       var currentTime = hour + ":" + minute + ":" + seconds;
          setTimeout(printTime, 1000);
          
      document.getElementById("radioButtonsSection").innerHTML = currentTime;    
-         
-     }   
+              }  
+       
+
+
 
     </script>
      </div>
