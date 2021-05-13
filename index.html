@@ -8,6 +8,9 @@
 </head>
 <body>
     
+<br>
+<div id="TimezoneInput">
+
 <form>
     
 <input name="timezone" value="est" type="radio"> Eastern Standard Time <br>
@@ -22,8 +25,10 @@
 
 </form>
 
+</div>
+
 <br>
-<div id="placeholder"></div>
+<div id="JSFunction1"></div>
 
 <script type="text/javascript">
 
@@ -37,16 +42,26 @@ for(let i = 0; i < firstVariable.length; i++){
 if(firstVariable[i].checked == true){
 
 secondVariable = firstVariable[i].value;
-document.getElementById("placeholder").innerHTML = secondVariable;
+document.getElementById("JSFunction1").innerHTML = secondVariable;
 
 }
-
-
-
+}
 }
 
-}
+function printClock(){
 
+var dateVariable = new Date();
+var hours = dateVariable.getHours();
+var minutes = dateVariable.getMinutes();
+var seconds = dateVariable.getSeconds();
+
+var currentTime = hours + ":" + minutes + ":" + seconds;
+
+setTimeout(printClock, 1000);
+
+document.getElementById("JSFunction1").innerHTML = currentTime;
+
+}
 
 </script>
 
