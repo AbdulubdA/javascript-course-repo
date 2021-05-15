@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>"Hello World!"</title>
-    
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    
+<h1>
+Choose a timezone
+</h1>
 
 <br>
 <div id="TimezoneInput">
@@ -28,37 +31,32 @@
 </form>
 
 </div>
-
 <br>
-<div id="JSFunction1"></div>
+
+<div id="blah">
 
 <script type="text/javascript">
 
 var offset = 0;
 
 function printSelection(){
-
 var firstVariable = document.getElementsByName("timezone");
 var secondVariable = "bst";
-
 for(let i = 0; i < firstVariable.length; i++){
-
 if(firstVariable[i].checked == true){
 
 secondVariable = firstVariable[i].value;
-
-document.getElementById("JSFunction1").innerHTML = secondVariable;
 
 }
 }
 
 if(secondVariable === "est"){offset = -5;}
-else if(timezone === "cst"){offset = -6;}
-else if(timezone === "mst"){offset = -7;}
-else if(timezone === "pst"){offset = -8;}
-else if(timezone === "ast"){offset = -4;}
-else if(timezone === "hast"){offset = 13;}
-else if(timezone === "bst"){offset = 0;}
+else if(secondVariable === "cst"){offset = -6;}
+else if(secondVariable === "mst"){offset = -7;}
+else if(secondVariable === "pst"){offset = -8;}
+else if(secondVariable === "ast"){offset = -4;}
+else if(secondVariable === "hast"){offset = -11;}
+else if(secondVariable === "bst"){offset = 0;}
 
 }
 
@@ -68,18 +66,28 @@ var dateVariable = new Date();
 var hours = dateVariable.getHours() + offset;
 var minutes = dateVariable.getMinutes();
 var seconds = dateVariable.getSeconds();
+var session = "AM";
 
+if(hours >= 12){session = "PM";}
+else{session = "AM";}
 
-var currentTime = hours + ":" + minutes + ":" + seconds;
+if(hours < 10){hours = "0" + hours;}
+if(minutes < 10){minutes = "0" + minutes;}
+if(seconds < 10){seconds = "0" + seconds;}
 
+var currentTime = hours + ":" + minutes + ":" + seconds + " " + session;
 
-setTimeout(printClock(), 1000);
+setTimeout(printClock, 1000);
 
-document.getElementById("JSFunction1").innerHTML = currentTime;
+document.getElementById("blah").innerHTML = currentTime;
 
 }
 
+printClock();
+
 </script>
+
+</div>
 
 </body>
 </html>
