@@ -18,7 +18,7 @@ body{
     width: 500px;
     height: 200px; /* rectangle around clock*/
     background-color: hotpink;
-    border: 10px solid black ;
+    border: 10px solid rgb(13, 172, 92) ;
     margin-left: 10px;
 
 }
