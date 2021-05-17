@@ -9,20 +9,6 @@ body{
     background: rgba(201, 104, 214, 0.425);
 }
 
-.clock{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 500px;
-    height: 200px; /* rectangle around clock*/
-    background-color: rgb(21, 218, 70);
-    border: 10px solid rgb(13, 172, 92) ;
-    margin-left: 20px;
-
-    font-size: 90px;
-}
 
 .timezone{
 
