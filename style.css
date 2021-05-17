@@ -14,10 +14,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     width: 500px;
     height: 200px; /* rectangle around clock*/
     background-color: hotpink;
     border: ivory;
+    margin-left: 10px;
 
 }
