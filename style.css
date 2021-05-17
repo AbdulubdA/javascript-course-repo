@@ -8,3 +8,16 @@ body{
     color: hsla(216, 72%, 48%, 0.842);
     background: rgba(201, 104, 214, 0.425);
 }
+
+.clock{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 500px;
+    height: 200px; /* rectangle around clock*/
+    background-color: hotpink;
+    border: ivory;
+
+}
