@@ -6,5 +6,5 @@ body{
     font-family: "Trebuchet MS", Verdana, sans-serif; /* comments after comma are backup fonts in case browser doesn't support one*/
     font-size: 25px;
     color: #fff;
-    background: darkorchid;
+    background: rgba(201, 104, 214, 0.425);
 }
