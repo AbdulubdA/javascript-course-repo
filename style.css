@@ -18,7 +18,6 @@ body{
     width: 500px;
     height: 200px; /* rectangle around clock*/
     background-color: hotpink;
-    border-radius: 50%;
     border: 10px ivory;
     margin-left: 10px;
 
